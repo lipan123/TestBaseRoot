@@ -25,6 +25,11 @@
     [self naviView];
 }
 
+- (void)setTabBarBadgeValue:(NSString *)valueString withIndex:(NSInteger)index{
+    UITabBarItem * item = [self.tabBarController.tabBar.items objectAtIndex:index];
+    item.badgeValue = valueString;
+}
+
 - (LPNaviView *)naviView{
     if (!_naviView) {
         _naviView = [[LPNaviView alloc] init];

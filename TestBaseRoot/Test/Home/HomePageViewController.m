@@ -25,6 +25,8 @@
     [self.view addSubview:btn];
     //加载自定义的导航栏
     [self setupNavView];
+    //设置角标
+    [self setTabBarBadgeValue:@"12" withIndex:0];
 }
 
 - (void)go{
@@ -35,12 +37,12 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     //隐藏自带的导航栏
-    self.navigationController.navigationBar.hidden = YES;
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.hidden = NO;
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)setupNavView{

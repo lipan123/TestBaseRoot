@@ -17,7 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
  加载自定义导航栏,需子类重写
  */
 - (void)setupNavView;
-
+/**
+ 设置tabbar角标值
+ */
+- (void)setTabBarBadgeValue:(NSString *)valueString  withIndex:(NSInteger)index;
 @end
 
 NS_ASSUME_NONNULL_END
