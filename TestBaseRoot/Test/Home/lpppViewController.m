@@ -62,8 +62,9 @@
         make.top.mas_equalTo(100);
         make.height.mas_equalTo(200);
     }];
-    //加载视图
-    [self setupView];
+    //立即更新
+    [self.view layoutIfNeeded];
+
     //创建一个网络视频路径
     NSString *str = @"http://data.vod.itc.cn/?rb=1&key=jbZhEJhlqlUN-Wj_HEI8BjaVqKNFvDrn&prod=flash&pt=1&new=/137/113/vITnGttPQmaeWrZ3mg1j9H.mp4";
     NSURL *urlStr = [NSURL URLWithString:str];
@@ -75,6 +76,10 @@
     self.avLayer.videoGravity = AVLayerVideoGravityResizeAspect;
     self.avLayer.frame = self.contentView.bounds;
     [self.contentView.layer addSublayer:self.avLayer];
+    
+    //加载视图
+    [self setupView];
+    
     //开始播放,本地视频直接play就行
     //网络视频需要监测AVPlayerItem的status属性为AVPlayerStatusReadyToPlay时,才能开始播放
     //观察Status属性，可以在加载成功之后得到视频的时长
@@ -184,7 +189,6 @@
         make.centerY.mas_equalTo(self.pasueBtn);
         make.height.mas_equalTo(2);
     }];
-    [self.view layoutIfNeeded];
 }
 
 #pragma mark - 懒加载
