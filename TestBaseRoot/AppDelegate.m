@@ -17,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     TestTabBarController *vc = [[TestTabBarController alloc] init];
     LPNaviViewController *navc = [[LPNaviViewController alloc] initWithRootViewController:vc];
     self.window.rootViewController = navc;
