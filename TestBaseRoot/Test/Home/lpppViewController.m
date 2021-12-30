@@ -7,8 +7,8 @@
 
 #import "lpppViewController.h"
 #import <AVFoundation/AVFoundation.h>
-#import <CoreMedia/CMTime.h>
-@interface lpppViewController ()
+
+@interface lpppViewController ()<UIGestureRecognizerDelegate>
 /**
  媒体资源数据项
  */
@@ -72,9 +72,17 @@
  */
 @property (nonatomic, assign) BOOL isFullScreen;
 /**
+ 是否是用户手动切换
+ */
+@property (nonatomic, assign) BOOL isFullScreenByUser;
+/**
  当前屏幕方向
  */
 @property (nonatomic, assign) UIInterfaceOrientation currentOrientation;
+/**
+ 单击手势
+ */
+@property (nonatomic, strong) UITapGestureRecognizer *clickTap;
 
 @end
 
@@ -97,8 +105,7 @@
 #pragma mark - 创建avplayer
 - (void)setAvPlayer{
     //创建一个网络视频路径
-    NSString *str = @"https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4";
-//    NSString *str = @"http://data.vod.itc.cn/?rb=1&key=jbZhEJhlqlUN-Wj_HEI8BjaVqKNFvDrn&prod=flash&pt=1&new=/137/113/vITnGttPQmaeWrZ3mg1j9H.mp4";
+    NSString *str = @"http://data.vod.itc.cn/?rb=1&key=jbZhEJhlqlUN-Wj_HEI8BjaVqKNFvDrn&prod=flash&pt=1&new=/137/113/vITnGttPQmaeWrZ3mg1j9H.mp4";
     NSURL *urlStr = [NSURL URLWithString:str];
     //创建一个播放器
     self.playerItem = [[AVPlayerItem alloc] initWithURL:urlStr];
@@ -130,7 +137,7 @@
         //设置显示的时间：以00:00:00的格式
         weakSelf.alreadyLabel.text = [weakSelf formatTimeWithTimeInterVal:currentTime];
     }];
-//    [self.containerView setHidden:YES];
+    [self.containerView setHidden:YES];
     [self showActivityIndicatorView:YES];
 }
 
@@ -190,6 +197,15 @@
     }
 }
 
+//转换时间格式
+- (NSString *)formatTimeWithTimeInterVal:(NSTimeInterval)timeInterVal{
+    int minute = 0, hour = 0, secend = timeInterVal;
+    minute = (secend % 3600) /60;
+    hour = secend / 3600;
+    secend = secend % 60;
+    return [NSString stringWithFormat:@"%02d:%02d:%02d",hour,minute,secend];
+}
+
 #pragma mark - slider滑块相应方法
 - (void)sliderViewChange{
     if (self.player.status == AVPlayerStatusReadyToPlay) {
@@ -197,6 +213,7 @@
         CMTime seekTime = CMTimeMake(playTime, 1);
         [self.player seekToTime:seekTime completionHandler:^(BOOL finished) {
             if (finished) {
+                [self.pasueBtn setTitle:@"播放" forState:UIControlStateNormal];
                 [self.player play];
             }
         }];
@@ -217,20 +234,20 @@
 }
 
 #pragma mark - 点击屏幕
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    UITouch *touch = [touches.allObjects lastObject];
-//    if ([touch.view isDescendantOfView:self.playerView]) {
-//        self.containerView.hidden = !self.containerView.hidden;
-//        if (!self.containerView.hidden) {
-//            [self performSelector:@selector(hiddenContainerView) withObject:nil afterDelay:5];
-//        }
-//    }
+- (void)clickTap:(UITapGestureRecognizer *)clickTap{
+    self.containerView.hidden = !self.containerView.hidden;
+    if (self.containerView.hidden) {
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hiddenContainerView) object:nil];
+    }else{
+        [self performSelector:@selector(hiddenContainerView) withObject:nil afterDelay:5];
+    }
 }
 
 - (void)hiddenContainerView{
     self.containerView.hidden = YES;
 }
 
+#pragma mark - 等待指示器
 - (void)showActivityIndicatorView:(BOOL)isShow{
     if (isShow) {
         self.indicatorView.hidden = NO;
@@ -239,15 +256,6 @@
         [self.indicatorView stopAnimating];
         self.indicatorView.hidden = YES;
     }
-}
-
-//转换时间格式
-- (NSString *)formatTimeWithTimeInterVal:(NSTimeInterval)timeInterVal{
-    int minute = 0, hour = 0, secend = timeInterVal;
-    minute = (secend % 3600) /60;
-    hour = secend / 3600;
-    secend = secend % 60;
-    return [NSString stringWithFormat:@"%02d:%02d:%02d",hour,minute,secend];
 }
 
 #pragma mark - errorButton
@@ -272,11 +280,13 @@
 
 #pragma mark - 屏幕旋转相关
 - (void)switchScreen{
+    self.isFullScreenByUser = YES;
     if (self.isFullScreen) {
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationPortrait] forKey:@"orientation"];
     }else{
         [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
     }
+    self.isFullScreenByUser = NO;
 }
 
 - (void)orientChange:(NSNotification *)notification{
@@ -284,9 +294,17 @@
     if (orientation == UIDeviceOrientationPortrait) {
         [self setOrientationPortraitConstraint:UIInterfaceOrientationPortrait];
     }else if (orientation == UIDeviceOrientationLandscapeLeft) {
-        [self setOrientationLandscapeConstraint:UIInterfaceOrientationLandscapeRight];
+        if (self.isLandScape) {
+            [self setOrientationLandscapeConstraint:UIInterfaceOrientationLandscapeRight];
+        }else {
+            [self setOrientationLandscapeConstraint:UIInterfaceOrientationLandscapeLeft];
+        }
     }else if (orientation == UIDeviceOrientationLandscapeRight) {
-        [self setOrientationLandscapeConstraint:UIInterfaceOrientationLandscapeLeft];
+        if (self.isLandScape) {
+            [self setOrientationLandscapeConstraint:UIInterfaceOrientationLandscapeLeft];
+        }else {
+            [self setOrientationLandscapeConstraint:UIInterfaceOrientationLandscapeRight];
+        }
     }
 }
 //设置竖屏
@@ -297,6 +315,11 @@
     self.isFullScreen = NO;
     [self.playerView removeFromSuperview];
     [self.contentView addSubview:self.playerView];
+    if (!self.isLandScape) {    //如果不支持自动转屏,手动切换view的transform
+        [UIView animateWithDuration:0.25 animations:^{
+            self.playerView.transform = CGAffineTransformMakeRotation(0);
+        }];
+    }
     [self.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(0);
     }];
@@ -313,19 +336,51 @@
     [self.playerView removeFromSuperview];
     UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
     [keyWindow addSubview:self.playerView];
-    if (keyWindow.frame.size.width < keyWindow.frame.size.height) {
-        [self.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.width.equalTo(@(Device_Height));
-            make.height.equalTo(@(Device_Width));
-            make.center.equalTo([UIApplication sharedApplication].keyWindow);
-        }];
-    }else{
-        [self.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.width.equalTo(@(Device_Width));
-            make.height.equalTo(@(Device_Height));
-            make.center.equalTo([UIApplication sharedApplication].keyWindow);
-        }];
+    if (self.isLandScape) {
+        if (keyWindow.frame.size.width < keyWindow.frame.size.height) {
+            [self.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@(Device_Height));
+                make.height.equalTo(@(Device_Width));
+                make.center.equalTo([UIApplication sharedApplication].keyWindow);
+            }];
+        }else{
+            [self.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@(Device_Width));
+                make.height.equalTo(@(Device_Height));
+                make.center.equalTo([UIApplication sharedApplication].keyWindow);
+            }];
+        }
+    }else {
+        if (self.isFullScreenByUser) {  //手动切换到横屏
+            [UIView animateWithDuration:0.25 animations:^{                
+                self.playerView.transform = CGAffineTransformMakeRotation(M_PI / 2);
+            }];
+        }else{
+            if (orientation == UIInterfaceOrientationLandscapeLeft) {
+                [UIView animateWithDuration:0.25 animations:^{
+                    self.playerView.transform = CGAffineTransformMakeRotation(M_PI / 2);
+                }];
+            }else if (orientation == UIInterfaceOrientationLandscapeRight) {
+                [UIView animateWithDuration:0.25 animations:^{
+                    self.playerView.transform = CGAffineTransformMakeRotation(- M_PI / 2);
+                }];
+            }
+        }
+        if (keyWindow.frame.size.width < keyWindow.frame.size.height) {
+            [self.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@(Device_Height));
+                make.height.equalTo(@(Device_Width));
+                make.center.equalTo([UIApplication sharedApplication].keyWindow);
+            }];
+        }else{
+            [self.playerView mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.width.equalTo(@(Device_Width));
+                make.height.equalTo(@(Device_Height));
+                make.center.equalTo([UIApplication sharedApplication].keyWindow);
+            }];
+        }
     }
+    
     self.currentOrientation = orientation;
     [self.playerView layoutIfNeeded];
     self.avLayer.frame = self.playerView.bounds;
@@ -335,6 +390,7 @@
 - (void)setupView{
     [self.view addSubview:self.contentView];
     [self.contentView addSubview:self.playerView];
+    [self.playerView addGestureRecognizer:self.clickTap];   //添加手势
     [self.playerView bringSubviewToFront:self.containerView];
     [self.playerView addSubview:self.containerView];
     [self.containerView addSubview:self.pasueBtn];
@@ -502,6 +558,30 @@
         [_switchModelButton addTarget:self action:@selector(switchScreen) forControlEvents:UIControlEventTouchUpInside];
     }
     return _switchModelButton;
+}
+
+- (UITapGestureRecognizer *)clickTap{
+    if (!_clickTap) {
+        _clickTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickTap:)];
+        _clickTap.delegate = self;
+        _clickTap.numberOfTapsRequired = 1;
+        _clickTap.numberOfTouchesRequired = 1;
+    }
+    return _clickTap;
+}
+
+#pragma mark - 支持横竖屏
+- (BOOL)shouldAutorotate{
+    return YES;
+}
+
+// 支持哪些屏幕方向
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
 }
 
 - (void)dealloc{

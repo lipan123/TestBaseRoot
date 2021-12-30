@@ -13,6 +13,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface lpppViewController : LPBaseViewController
+//是否支持转屏
+@property (nonatomic, assign) BOOL isLandScape;
 
 @end
 

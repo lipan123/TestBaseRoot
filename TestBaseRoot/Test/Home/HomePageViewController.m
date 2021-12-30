@@ -31,6 +31,7 @@
 
 - (void)go{
     lpppViewController *vc = [[lpppViewController alloc] init];
+    vc.isLandScape = NO;    //如果general中设置了支持自动旋转,负值为yes
     [self.navigationController pushViewController:vc animated:YES];
 }
 
