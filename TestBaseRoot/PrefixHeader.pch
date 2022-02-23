@@ -13,4 +13,11 @@
 #define Device_Width  [[UIScreen mainScreen] bounds].size.width//获取屏幕宽高
 #define Device_Height [[UIScreen mainScreen] bounds].size.height
 
+//不同屏幕尺寸字体适配（375，667是因为效果图为IPHONE6 如果不是则根据实际情况修改）//414 736
+#define kScreenWidthRatio  (Device_Width  / 375.0)
+#define kScreenHeightRatio (Device_Height / 667.0)
+//自动适配宽度、高度
+#define kFitW(x)  ceilf((x) * kScreenWidthRatio)
+#define kFitH(x)  ceilf((x) * kScreenHeightRatio)
+
 #endif /* PrefixHeader_pch */

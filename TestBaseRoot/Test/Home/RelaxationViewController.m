@@ -6,7 +6,7 @@
 //
 
 #import "RelaxationViewController.h"
-
+#import "LPSpecialAlertView.h"
 @interface RelaxationViewController ()
 
 @end
@@ -17,6 +17,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"休闲";
+    LPSpecialAlertView *alertView = [LPSpecialAlertView alertViewWithTitle:@"登录注册体验更多功能" messageBtn:@[@"我要注册",@"立即登录"] otherBtn:@[@"取消"]];
+    alertView.messageBtnBlock = ^(NSInteger selectIndex) {
+        NSLog(@"%ld",selectIndex);
+    };
+    alertView.otherBtnBlock = ^(NSInteger selectIndex) {
+        NSLog(@"%ld",selectIndex);
+    };
+    [alertView addToFatherView:self.view];
 }
 
 /*
