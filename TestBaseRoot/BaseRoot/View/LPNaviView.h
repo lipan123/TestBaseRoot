@@ -7,8 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define kStatusBarH  [[UIApplication sharedApplication] statusBarFrame].size.height
-
 /**
  自定义导航栏
  */

@@ -11,6 +11,8 @@
 		9FBC93C02797B8F200B3202D /* MenuScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC93BE2797B8F200B3202D /* MenuScrollView.m */; };
 		9FBC93C32797C1D700B3202D /* MenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC93C22797C1D700B3202D /* MenuModel.m */; };
 		9FC79A9D2788303E00DF71D9 /* LPSpecialAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC79A9C2788303E00DF71D9 /* LPSpecialAlertView.m */; };
+		9FCDA7A927C8D0B1008B736A /* DynamicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDA7A827C8D0B1008B736A /* DynamicCell.m */; };
+		9FCDA7AD27C8D8EB008B736A /* DynamicCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDA7AC27C8D8EB008B736A /* DynamicCellModel.m */; };
 		9FD78BB82772B3CE002B5CF2 /* TestTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD78BB72772B3CE002B5CF2 /* TestTabBarController.m */; };
 		9FD78BBC2772B81B002B5CF2 /* LPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD78BBB2772B81B002B5CF2 /* LPBaseViewController.m */; };
 		9FD78BBF2772B851002B5CF2 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD78BBE2772B851002B5CF2 /* HomePageViewController.m */; };
@@ -25,6 +27,10 @@
 		9FDA44922771B48300B938D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA44912771B48300B938D7 /* main.m */; };
 		9FDA449F2771C52800B938D7 /* LPTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA449E2771C52800B938D7 /* LPTabBarItem.m */; };
 		9FDA44A32771CBAF00B938D7 /* LPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA44A22771CBAF00B938D7 /* LPTabBarController.m */; };
+		9FDB9A4727CCB10200114C5E /* TableVieCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB9A4627CCB10200114C5E /* TableVieCellModel.m */; };
+		9FDB9A4C27CCB83900114C5E /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB9A4B27CCB83900114C5E /* DynamicViewController.m */; };
+		9FDB9A4F27CCBD8C00114C5E /* MessageBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB9A4E27CCBD8C00114C5E /* MessageBtnViewController.m */; };
+		9FDB9A5227CCBDE200114C5E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB9A5127CCBDE200114C5E /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,10 @@
 		9FBC93C22797C1D700B3202D /* MenuModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuModel.m; sourceTree = "<group>"; };
 		9FC79A9B2788303E00DF71D9 /* LPSpecialAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPSpecialAlertView.h; sourceTree = "<group>"; };
 		9FC79A9C2788303E00DF71D9 /* LPSpecialAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPSpecialAlertView.m; sourceTree = "<group>"; };
+		9FCDA7A727C8D0B1008B736A /* DynamicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicCell.h; sourceTree = "<group>"; };
+		9FCDA7A827C8D0B1008B736A /* DynamicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCell.m; sourceTree = "<group>"; };
+		9FCDA7AB27C8D8EB008B736A /* DynamicCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicCellModel.h; sourceTree = "<group>"; };
+		9FCDA7AC27C8D8EB008B736A /* DynamicCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCellModel.m; sourceTree = "<group>"; };
 		9FD78BB62772B3CE002B5CF2 /* TestTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTabBarController.h; sourceTree = "<group>"; };
 		9FD78BB72772B3CE002B5CF2 /* TestTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTabBarController.m; sourceTree = "<group>"; };
 		9FD78BBA2772B81B002B5CF2 /* LPBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPBaseViewController.h; sourceTree = "<group>"; };
@@ -62,6 +72,14 @@
 		9FDA449E2771C52800B938D7 /* LPTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPTabBarItem.m; sourceTree = "<group>"; };
 		9FDA44A12771CBAF00B938D7 /* LPTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPTabBarController.h; sourceTree = "<group>"; };
 		9FDA44A22771CBAF00B938D7 /* LPTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPTabBarController.m; sourceTree = "<group>"; };
+		9FDB9A4527CCB10200114C5E /* TableVieCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableVieCellModel.h; sourceTree = "<group>"; };
+		9FDB9A4627CCB10200114C5E /* TableVieCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableVieCellModel.m; sourceTree = "<group>"; };
+		9FDB9A4A27CCB83900114C5E /* DynamicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicViewController.h; sourceTree = "<group>"; };
+		9FDB9A4B27CCB83900114C5E /* DynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicViewController.m; sourceTree = "<group>"; };
+		9FDB9A4D27CCBD8C00114C5E /* MessageBtnViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageBtnViewController.h; sourceTree = "<group>"; };
+		9FDB9A4E27CCBD8C00114C5E /* MessageBtnViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageBtnViewController.m; sourceTree = "<group>"; };
+		9FDB9A5027CCBDE200114C5E /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		9FDB9A5127CCBDE200114C5E /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		BD83BF0BA568FE000D1EA63D /* Pods-TestBaseRoot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBaseRoot.debug.xcconfig"; path = "Target Support Files/Pods-TestBaseRoot/Pods-TestBaseRoot.debug.xcconfig"; sourceTree = "<group>"; };
 		D79807189D94F5CDD662C3E0 /* libPods-TestBaseRoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestBaseRoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A88DCA0F2E4DB97430A61A /* Pods-TestBaseRoot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBaseRoot.release.xcconfig"; path = "Target Support Files/Pods-TestBaseRoot/Pods-TestBaseRoot.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,9 +125,26 @@
 			path = LPSpecialAlertView;
 			sourceTree = "<group>";
 		};
+		9FCDA7A627C8D061008B736A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FCDA7AA27C8D8B9008B736A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FDB9A4527CCB10200114C5E /* TableVieCellModel.h */,
+				9FDB9A4627CCB10200114C5E /* TableVieCellModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9FD78BB32772B2C2002B5CF2 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				9FDB9A4427CC649E00114C5E /* Other */,
 				9FBC93BD2797B8D500B3202D /* Pulic */,
 				9FC79A9A27882FE000DF71D9 /* LPSpecialAlertView */,
 				9FD78BB92772B677002B5CF2 /* Home */,
@@ -138,14 +173,14 @@
 		9FD78BB92772B677002B5CF2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9FCDA7AA27C8D8B9008B736A /* Model */,
+				9FCDA7A627C8D061008B736A /* View */,
 				9FD78BBD2772B851002B5CF2 /* HomePageViewController.h */,
 				9FD78BBE2772B851002B5CF2 /* HomePageViewController.m */,
 				9FD78BC02772B89A002B5CF2 /* RelaxationViewController.h */,
 				9FD78BC12772B89A002B5CF2 /* RelaxationViewController.m */,
 				9FD78BC32772B905002B5CF2 /* MYViewController.h */,
 				9FD78BC42772B905002B5CF2 /* MYViewController.m */,
-				9FD78BC92772C4F0002B5CF2 /* lpppViewController.h */,
-				9FD78BCA2772C4F0002B5CF2 /* lpppViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -223,6 +258,41 @@
 				9FD78BCD2773011E002B5CF2 /* LPNaviViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9FDB9A4427CC649E00114C5E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9FDB9A4927CCB7ED00114C5E /* Model */,
+				9FDB9A4827CCB7E500114C5E /* View */,
+				9FD78BC92772C4F0002B5CF2 /* lpppViewController.h */,
+				9FD78BCA2772C4F0002B5CF2 /* lpppViewController.m */,
+				9FDB9A4A27CCB83900114C5E /* DynamicViewController.h */,
+				9FDB9A4B27CCB83900114C5E /* DynamicViewController.m */,
+				9FDB9A4D27CCBD8C00114C5E /* MessageBtnViewController.h */,
+				9FDB9A4E27CCBD8C00114C5E /* MessageBtnViewController.m */,
+				9FDB9A5027CCBDE200114C5E /* MenuViewController.h */,
+				9FDB9A5127CCBDE200114C5E /* MenuViewController.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		9FDB9A4827CCB7E500114C5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDA7A727C8D0B1008B736A /* DynamicCell.h */,
+				9FCDA7A827C8D0B1008B736A /* DynamicCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FDB9A4927CCB7ED00114C5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FCDA7AB27C8D8EB008B736A /* DynamicCellModel.h */,
+				9FCDA7AC27C8D8EB008B736A /* DynamicCellModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DA12C4875435FBD33D18D726 /* Pods */ = {
@@ -332,15 +402,21 @@
 				9FD78BB82772B3CE002B5CF2 /* TestTabBarController.m in Sources */,
 				9FDA449F2771C52800B938D7 /* LPTabBarItem.m in Sources */,
 				9FDA44812771B48200B938D7 /* AppDelegate.m in Sources */,
+				9FDB9A5227CCBDE200114C5E /* MenuViewController.m in Sources */,
 				9FD78BC22772B89A002B5CF2 /* RelaxationViewController.m in Sources */,
+				9FDB9A4F27CCBD8C00114C5E /* MessageBtnViewController.m in Sources */,
 				9FDA44922771B48300B938D7 /* main.m in Sources */,
+				9FDB9A4C27CCB83900114C5E /* DynamicViewController.m in Sources */,
 				9FD78BBF2772B851002B5CF2 /* HomePageViewController.m in Sources */,
 				9FBC93C32797C1D700B3202D /* MenuModel.m in Sources */,
 				9FD78BCE2773011E002B5CF2 /* LPNaviViewController.m in Sources */,
 				9FD78BD427730F6D002B5CF2 /* LPNaviView.m in Sources */,
 				9FDA44A32771CBAF00B938D7 /* LPTabBarController.m in Sources */,
 				9FC79A9D2788303E00DF71D9 /* LPSpecialAlertView.m in Sources */,
+				9FCDA7AD27C8D8EB008B736A /* DynamicCellModel.m in Sources */,
+				9FDB9A4727CCB10200114C5E /* TableVieCellModel.m in Sources */,
 				9FD78BCB2772C4F0002B5CF2 /* lpppViewController.m in Sources */,
+				9FCDA7A927C8D0B1008B736A /* DynamicCell.m in Sources */,
 				9FBC93C02797B8F200B3202D /* MenuScrollView.m in Sources */,
 				9FD78BBC2772B81B002B5CF2 /* LPBaseViewController.m in Sources */,
 			);

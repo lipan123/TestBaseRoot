@@ -20,4 +20,13 @@
 #define kFitW(x)  ceilf((x) * kScreenWidthRatio)
 #define kFitH(x)  ceilf((x) * kScreenHeightRatio)
 
+#define kStatusBarH  [[UIApplication sharedApplication] statusBarFrame].size.height
+
+#ifndef isIphoneX
+#define isIphoneX ([UIScreen mainScreen].bounds.size.height >= 812.0f) ? YES : NO
+#endif
+
+#define tabarHeight isIphoneX?83.0f:49.0f
+
+
 #endif /* PrefixHeader_pch */
