@@ -9,7 +9,9 @@
 #import "TestTabBarController.h"
 #import "LPNaviViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<SRWebSocketDelegate>
+
+@property (nonatomic, strong) SRWebSocket *socket;
 
 @end
 
@@ -22,8 +24,34 @@
     LPNaviViewController *navc = [[LPNaviViewController alloc] initWithRootViewController:vc];
     self.window.rootViewController = navc;
     [self.window makeKeyAndVisible];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://192.168.1.161:4445/app?token=gjlzn01&id=app1"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+    self.socket = [[SRWebSocket alloc] initWithURLRequest:request];
+    self.socket.delegate = self;
+    [self.socket open];
+
     return YES;
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application{
+    NSLog(@"---程序进入后台---");
+    NSLog(@"---%ld---",(long)self.socket.readyState);
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message{
+    NSLog(@"--接收到消息--%@--",(NSString *)message);
+    if (message) {
+        NSData *data = [@"已接收到消息" dataUsingEncoding:NSUTF8StringEncoding];
+        [self.socket sendData:data error:nil];
+    }
+}
+
+- (void)webSocketDidOpen:(SRWebSocket *)webSocket{
+    NSLog(@"----WebSocket-正在链接----");
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error{
+    NSLog(@"----WebSocket-已断开链接----");
+}
 
 @end

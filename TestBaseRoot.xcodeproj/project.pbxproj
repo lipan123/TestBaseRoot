@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F758396C508C7B9F5E84B7E /* libPods-TestBaseRoot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D79807189D94F5CDD662C3E0 /* libPods-TestBaseRoot.a */; };
+		9F71269728193E7D00027C1C /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F71269628193E7D00027C1C /* HomePageViewModel.m */; };
 		9FBC93C02797B8F200B3202D /* MenuScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC93BE2797B8F200B3202D /* MenuScrollView.m */; };
 		9FBC93C32797C1D700B3202D /* MenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC93C22797C1D700B3202D /* MenuModel.m */; };
 		9FC79A9D2788303E00DF71D9 /* LPSpecialAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC79A9C2788303E00DF71D9 /* LPSpecialAlertView.m */; };
@@ -21,6 +22,7 @@
 		9FD78BCB2772C4F0002B5CF2 /* lpppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD78BCA2772C4F0002B5CF2 /* lpppViewController.m */; };
 		9FD78BCE2773011E002B5CF2 /* LPNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD78BCD2773011E002B5CF2 /* LPNaviViewController.m */; };
 		9FD78BD427730F6D002B5CF2 /* LPNaviView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD78BD327730F6D002B5CF2 /* LPNaviView.m */; };
+		9FDA2C1B27D9DA3100DF33D4 /* LPWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA2C1A27D9DA3100DF33D4 /* LPWaterFallLayout.m */; };
 		9FDA44812771B48200B938D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDA44802771B48200B938D7 /* AppDelegate.m */; };
 		9FDA448C2771B48300B938D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA448B2771B48300B938D7 /* Assets.xcassets */; };
 		9FDA448F2771B48300B938D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FDA448D2771B48300B938D7 /* LaunchScreen.storyboard */; };
@@ -31,9 +33,14 @@
 		9FDB9A4C27CCB83900114C5E /* DynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB9A4B27CCB83900114C5E /* DynamicViewController.m */; };
 		9FDB9A4F27CCBD8C00114C5E /* MessageBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB9A4E27CCBD8C00114C5E /* MessageBtnViewController.m */; };
 		9FDB9A5227CCBDE200114C5E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB9A5127CCBDE200114C5E /* MenuViewController.m */; };
+		9FDEDF9127FEDC800033AEDD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDEDF9027FEDC800033AEDD /* CFNetwork.framework */; };
+		9FDEDF9327FEDC880033AEDD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDEDF9227FEDC880033AEDD /* Security.framework */; };
+		9FDEDF9527FEDC8E0033AEDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FDEDF9427FEDC8E0033AEDD /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F71269528193E7D00027C1C /* HomePageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewModel.h; sourceTree = "<group>"; };
+		9F71269628193E7D00027C1C /* HomePageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewModel.m; sourceTree = "<group>"; };
 		9FBC93BE2797B8F200B3202D /* MenuScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScrollView.m; sourceTree = "<group>"; };
 		9FBC93BF2797B8F200B3202D /* MenuScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScrollView.h; sourceTree = "<group>"; };
 		9FBC93C12797C1D700B3202D /* MenuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuModel.h; sourceTree = "<group>"; };
@@ -61,6 +68,8 @@
 		9FD78BD027730E5D002B5CF2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		9FD78BD227730F6D002B5CF2 /* LPNaviView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPNaviView.h; sourceTree = "<group>"; };
 		9FD78BD327730F6D002B5CF2 /* LPNaviView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPNaviView.m; sourceTree = "<group>"; };
+		9FDA2C1927D9DA3100DF33D4 /* LPWaterFallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPWaterFallLayout.h; sourceTree = "<group>"; };
+		9FDA2C1A27D9DA3100DF33D4 /* LPWaterFallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPWaterFallLayout.m; sourceTree = "<group>"; };
 		9FDA447C2771B48200B938D7 /* TestBaseRoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestBaseRoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDA447F2771B48200B938D7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9FDA44802771B48200B938D7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -80,6 +89,10 @@
 		9FDB9A4E27CCBD8C00114C5E /* MessageBtnViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageBtnViewController.m; sourceTree = "<group>"; };
 		9FDB9A5027CCBDE200114C5E /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		9FDB9A5127CCBDE200114C5E /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		9FDEDF9027FEDC800033AEDD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9FDEDF9227FEDC880033AEDD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9FDEDF9427FEDC8E0033AEDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9FDEDF9627FEDD380033AEDD /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		BD83BF0BA568FE000D1EA63D /* Pods-TestBaseRoot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBaseRoot.debug.xcconfig"; path = "Target Support Files/Pods-TestBaseRoot/Pods-TestBaseRoot.debug.xcconfig"; sourceTree = "<group>"; };
 		D79807189D94F5CDD662C3E0 /* libPods-TestBaseRoot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestBaseRoot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A88DCA0F2E4DB97430A61A /* Pods-TestBaseRoot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestBaseRoot.release.xcconfig"; path = "Target Support Files/Pods-TestBaseRoot/Pods-TestBaseRoot.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,7 +103,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FDEDF9127FEDC800033AEDD /* CFNetwork.framework in Frameworks */,
+				9FDEDF9327FEDC880033AEDD /* Security.framework in Frameworks */,
 				2F758396C508C7B9F5E84B7E /* libPods-TestBaseRoot.a in Frameworks */,
+				9FDEDF9527FEDC8E0033AEDD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,9 +116,22 @@
 		9BAD30A44B2831093783F4B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FDEDF9627FEDD380033AEDD /* libicucore.tbd */,
+				9FDEDF9427FEDC8E0033AEDD /* Foundation.framework */,
+				9FDEDF9227FEDC880033AEDD /* Security.framework */,
+				9FDEDF9027FEDC800033AEDD /* CFNetwork.framework */,
 				D79807189D94F5CDD662C3E0 /* libPods-TestBaseRoot.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F71269428193D8200027C1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F71269528193E7D00027C1C /* HomePageViewModel.h */,
+				9F71269628193E7D00027C1C /* HomePageViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9FBC93BD2797B8D500B3202D /* Pulic */ = {
@@ -173,6 +202,7 @@
 		9FD78BB92772B677002B5CF2 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9F71269428193D8200027C1C /* ViewModel */,
 				9FCDA7AA27C8D8B9008B736A /* Model */,
 				9FCDA7A627C8D061008B736A /* View */,
 				9FD78BBD2772B851002B5CF2 /* HomePageViewController.h */,
@@ -291,6 +321,8 @@
 			children = (
 				9FCDA7AB27C8D8EB008B736A /* DynamicCellModel.h */,
 				9FCDA7AC27C8D8EB008B736A /* DynamicCellModel.m */,
+				9FDA2C1927D9DA3100DF33D4 /* LPWaterFallLayout.h */,
+				9FDA2C1A27D9DA3100DF33D4 /* LPWaterFallLayout.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,6 +440,7 @@
 				9FDA44922771B48300B938D7 /* main.m in Sources */,
 				9FDB9A4C27CCB83900114C5E /* DynamicViewController.m in Sources */,
 				9FD78BBF2772B851002B5CF2 /* HomePageViewController.m in Sources */,
+				9FDA2C1B27D9DA3100DF33D4 /* LPWaterFallLayout.m in Sources */,
 				9FBC93C32797C1D700B3202D /* MenuModel.m in Sources */,
 				9FD78BCE2773011E002B5CF2 /* LPNaviViewController.m in Sources */,
 				9FD78BD427730F6D002B5CF2 /* LPNaviView.m in Sources */,
@@ -415,6 +448,7 @@
 				9FC79A9D2788303E00DF71D9 /* LPSpecialAlertView.m in Sources */,
 				9FCDA7AD27C8D8EB008B736A /* DynamicCellModel.m in Sources */,
 				9FDB9A4727CCB10200114C5E /* TableVieCellModel.m in Sources */,
+				9F71269728193E7D00027C1C /* HomePageViewModel.m in Sources */,
 				9FD78BCB2772C4F0002B5CF2 /* lpppViewController.m in Sources */,
 				9FCDA7A927C8D0B1008B736A /* DynamicCell.m in Sources */,
 				9FBC93C02797B8F200B3202D /* MenuScrollView.m in Sources */,
@@ -555,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CN6DH55A2E;
+				DEVELOPMENT_TEAM = KM6ZEXC7YV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestBaseRoot/PrefixHeader.pch";
 				INFOPLIST_FILE = TestBaseRoot/Info.plist;
@@ -577,7 +611,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CN6DH55A2E;
+				DEVELOPMENT_TEAM = KM6ZEXC7YV;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestBaseRoot/PrefixHeader.pch";
 				INFOPLIST_FILE = TestBaseRoot/Info.plist;

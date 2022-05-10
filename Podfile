@@ -7,5 +7,7 @@ target 'TestBaseRoot' do
 
   # Pods for TestBaseRoot
  pod 'Masonry'
-
+ pod 'SocketRocket'
+ pod 'ReactiveObjC'
+ pod 'AFNetworking'
 end

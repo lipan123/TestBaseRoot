@@ -28,8 +28,8 @@
         model.imgNameOrUrl = imgArray[i];
         [dataArray addObject:model];
     }
-    
-    MenuScrollView *menuView = [[MenuScrollView alloc] initWithFrame:CGRectMake(0, 0, Device_Width, self.view.frame.size.height-tabarHeight) MenuData:dataArray MenuSize:CGSizeMake(kFitW(45), kFitW(45)) ScrollDirection:Vertical MenusInLine:2 MenuInList:5 MenuDelegate:self];
+    CGFloat menuViewHeight = tabarHeight;
+    MenuScrollView *menuView = [[MenuScrollView alloc] initWithFrame:CGRectMake(0, 0, Device_Width, self.view.frame.size.height-menuViewHeight) MenuData:dataArray MenuSize:CGSizeMake(kFitW(45), kFitW(45)) ScrollDirection:Vertical MenusInLine:2 MenuInList:5 MenuDelegate:self];
     [self.view addSubview:menuView];
 }
 

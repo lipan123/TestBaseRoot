@@ -43,6 +43,12 @@ static NSString *Identifier = @"IdentifierCell";
         make.left.right.equalTo(self.view);
         make.bottom.equalTo(@(-tabarHeight));
     }];
+    
+    [[RACObserve(self.navigationItem, title) take:2] subscribeNext:^(id  _Nullable x) {
+            if (x) {
+                NSLog(@"123");
+            }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

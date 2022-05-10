@@ -1,16 +1,24 @@
 PODS:
   - Masonry (1.1.0)
+  - ReactiveObjC (3.1.1)
+  - SocketRocket (0.6.0)
 
 DEPENDENCIES:
   - Masonry
+  - ReactiveObjC
+  - SocketRocket
 
 SPEC REPOS:
   trunk:
     - Masonry
+    - ReactiveObjC
+    - SocketRocket
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
 
-PODFILE CHECKSUM: a4ece05d01243fb613521b395ac04f42177494ac
+PODFILE CHECKSUM: a015e85b8e7332c6e6406b2a7328d6f764d98485
 
 COCOAPODS: 1.11.2

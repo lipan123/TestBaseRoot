@@ -9,6 +9,8 @@
 #define PrefixHeader_pch
 
 #import "Masonry.h"
+#import "SocketRocket.h"
+#import "ReactiveObjC.h"
 
 #define Device_Width  [[UIScreen mainScreen] bounds].size.width//获取屏幕宽高
 #define Device_Height [[UIScreen mainScreen] bounds].size.height
@@ -22,11 +24,9 @@
 
 #define kStatusBarH  [[UIApplication sharedApplication] statusBarFrame].size.height
 
-#ifndef isIphoneX
 #define isIphoneX ([UIScreen mainScreen].bounds.size.height >= 812.0f) ? YES : NO
-#endif
 
-#define tabarHeight isIphoneX?83.0f:49.0f
+#define tabarHeight (isIphoneX) ? 83.0f : 49.0f
 
 
 #endif /* PrefixHeader_pch */
