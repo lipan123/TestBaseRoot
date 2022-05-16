@@ -33,6 +33,13 @@
     
     if (@available(iOS 13,*)) {
         self.modalPresentationStyle  = UIModalPresentationFullScreen;
+        if (@available(iOS 15.0, *)) {
+            UINavigationBarAppearance *nav = [UINavigationBarAppearance new];
+            nav.backgroundColor = [UIColor redColor];
+            nav.backgroundEffect = nil;
+            self.navigationBar.scrollEdgeAppearance = nav;
+            self.navigationBar.standardAppearance = nav;
+        }
     }
 }
 
