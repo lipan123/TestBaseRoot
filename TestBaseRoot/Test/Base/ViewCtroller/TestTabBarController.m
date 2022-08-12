@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     self.titleColor = [UIColor blackColor];
-    self.titleColorSL = [UIColor redColor];
+    self.titleColorSL = [UIColor blueColor];
     
     LPTabBarItem *item1 = [[LPTabBarItem alloc] init];
     item1.title = @"首页";

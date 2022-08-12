@@ -10,4 +10,5 @@ target 'TestBaseRoot' do
  pod 'SocketRocket'
  pod 'ReactiveObjC'
  pod 'AFNetworking'
+ pod 'AsyncDisplayKit'
 end

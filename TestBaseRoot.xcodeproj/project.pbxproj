@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F758396C508C7B9F5E84B7E /* libPods-TestBaseRoot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D79807189D94F5CDD662C3E0 /* libPods-TestBaseRoot.a */; };
 		9F71269728193E7D00027C1C /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F71269628193E7D00027C1C /* HomePageViewModel.m */; };
+		9F954D19285B048400B669E0 /* AppLaunchTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F954D18285B048400B669E0 /* AppLaunchTime.m */; };
 		9FBC93C02797B8F200B3202D /* MenuScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC93BE2797B8F200B3202D /* MenuScrollView.m */; };
 		9FBC93C32797C1D700B3202D /* MenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FBC93C22797C1D700B3202D /* MenuModel.m */; };
 		9FC79A9D2788303E00DF71D9 /* LPSpecialAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC79A9C2788303E00DF71D9 /* LPSpecialAlertView.m */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		9F71269528193E7D00027C1C /* HomePageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewModel.h; sourceTree = "<group>"; };
 		9F71269628193E7D00027C1C /* HomePageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewModel.m; sourceTree = "<group>"; };
+		9F954D17285B048400B669E0 /* AppLaunchTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppLaunchTime.h; sourceTree = "<group>"; };
+		9F954D18285B048400B669E0 /* AppLaunchTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLaunchTime.m; sourceTree = "<group>"; };
 		9FBC93BE2797B8F200B3202D /* MenuScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScrollView.m; sourceTree = "<group>"; };
 		9FBC93BF2797B8F200B3202D /* MenuScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScrollView.h; sourceTree = "<group>"; };
 		9FBC93C12797C1D700B3202D /* MenuModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuModel.h; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 			children = (
 				9FDA449D2771C52800B938D7 /* LPTabBarItem.h */,
 				9FDA449E2771C52800B938D7 /* LPTabBarItem.m */,
+				9F954D17285B048400B669E0 /* AppLaunchTime.h */,
+				9F954D18285B048400B669E0 /* AppLaunchTime.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				9F71269728193E7D00027C1C /* HomePageViewModel.m in Sources */,
 				9FD78BCB2772C4F0002B5CF2 /* lpppViewController.m in Sources */,
 				9FCDA7A927C8D0B1008B736A /* DynamicCell.m in Sources */,
+				9F954D19285B048400B669E0 /* AppLaunchTime.m in Sources */,
 				9FBC93C02797B8F200B3202D /* MenuScrollView.m in Sources */,
 				9FD78BBC2772B81B002B5CF2 /* LPBaseViewController.m in Sources */,
 			);

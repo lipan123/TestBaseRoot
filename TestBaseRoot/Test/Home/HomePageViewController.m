@@ -38,17 +38,22 @@ static NSString *Identifier = @"IdentifierCell";
     [self.dataArray addObject:[TableVieCellModel initTitle:@"测试内容为按钮的弹窗" withViewController:@"MessageBtnViewController"]];
     [self.dataArray addObject:[TableVieCellModel initTitle:@"测试菜单" withViewController:@"MenuViewController"]];
     [self.view addSubview:self.mainTableView];
-    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.naviView.mas_bottom);
-        make.left.right.equalTo(self.view);
-        make.bottom.equalTo(@(-tabarHeight));
-    }];
-    
+    self.mainTableView.frame = CGRectMake(0, navHeight, Device_Width, Device_Height-tabarHeight-navHeight);
+    //使用下面这种可能会触发UITableViewAlertForLayoutOutsideViewHierarchy
+//    [self.mainTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(self.naviView.mas_bottom);
+//        make.left.right.equalTo(self.view);
+//        make.bottom.equalTo(@(-tabarHeight));
+//    }];
+//    [self.view setNeedsLayout];
+   
     [[RACObserve(self.navigationItem, title) take:2] subscribeNext:^(id  _Nullable x) {
             if (x) {
                 NSLog(@"123");
             }
     }];
+    NSLog(@"%@",[self class]);
+    NSLog(@"%@",[super class]);
 }
 
 - (void)viewWillAppear:(BOOL)animated{

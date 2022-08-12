@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "TestTabBarController.h"
 #import "LPNaviViewController.h"
+#import "AppLaunchTime.h"
 
 @interface AppDelegate ()<SRWebSocketDelegate>
 
@@ -25,10 +26,12 @@
     self.window.rootViewController = navc;
     [self.window makeKeyAndVisible];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://192.168.1.161:4445/app?token=gjlzn01&id=app1"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-    self.socket = [[SRWebSocket alloc] initWithURLRequest:request];
-    self.socket.delegate = self;
-    [self.socket open];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"ws://192.168.1.161:4445/app?token=gjlzn01&id=app1"] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
+//    self.socket = [[SRWebSocket alloc] initWithURLRequest:request];
+//    self.socket.delegate = self;
+//    [self.socket open];
+  
+    [AppLaunchTime mark];
 
     return YES;
 }

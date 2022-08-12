@@ -26,7 +26,7 @@
 
 #define isIphoneX ([UIScreen mainScreen].bounds.size.height >= 812.0f) ? YES : NO
 
-#define tabarHeight (isIphoneX) ? 83.0f : 49.0f
-
+#define tabarHeight ((isIphoneX) ? 83.0f : 49.0f)
+#define navHeight (44 + kStatusBarH)
 
 #endif /* PrefixHeader_pch */
